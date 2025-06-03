@@ -43,6 +43,12 @@ class Solution:
 # We used additional info such as depth of each node (as opposed to the depth of the entire tree)
 # to calculate the depth of the entire tree
 
+# Fishka №2:
+# Write all edge cases first to improve runtime
+# For instance:
+# if root.left is None and root.right is None:
+#   return 1
+
 # TODO: try to solve using DFS without recursion. Use curr_depth and child_depth but add one another variable
 #  for measuring max_depth. Use stack instead of que.
 
