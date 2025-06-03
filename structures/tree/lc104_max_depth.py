@@ -7,8 +7,6 @@ class TreeNode:
 
 from collections import deque
 from typing import Optional
-from math import ceil
-
 
 class Solution:
     def maxDepth(self, root: Optional[TreeNode]) -> int:
@@ -36,3 +34,9 @@ class Solution:
                     que.append((right, child_depth))
 
         return curr_depth
+
+# Fishki:
+# The complexity of solution one can substitute through using more memory
+# Instead of using just one counter for the entire tree
+# We used additional info such depth of each node (as opposed to the depth of the tree)
+# to calculate the depth of the entire tree
