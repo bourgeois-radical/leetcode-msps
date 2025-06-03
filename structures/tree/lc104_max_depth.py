@@ -8,6 +8,8 @@ class TreeNode:
 from collections import deque
 from typing import Optional
 
+# ::: BFS SOLUTION :::
+
 class Solution:
     def maxDepth(self, root: Optional[TreeNode]) -> int:
 
@@ -35,8 +37,14 @@ class Solution:
 
         return curr_depth
 
-# Fishki:
+# Fishka №1:
 # The complexity of solution one can substitute through using more memory
 # Instead of using just one counter for the entire tree
-# We used additional info such depth of each node (as opposed to the depth of the tree)
+# We used additional info such as depth of each node (as opposed to the depth of the entire tree)
 # to calculate the depth of the entire tree
+
+# TODO: try to solve using DFS without recursion. Use curr_depth and child_depth but add one another variable
+#  for measuring max_depth. Use stack instead of que.
+
+# ::: DFS SOLUTION :::
+
