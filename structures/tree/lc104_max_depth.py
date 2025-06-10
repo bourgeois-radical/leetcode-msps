@@ -1,4 +1,7 @@
 # Definition for a binary tree node.
+from inspect import stack
+
+
 class TreeNode:
     def __init__(self, val=0, left=None, right=None):
         self.val = val
@@ -49,8 +52,43 @@ class Solution:
 # if root.left is None and root.right is None:
 #   return 1
 
+# Fishka №3
+# Why BFS is que and DFS is stack
+# becuase:
+# que is horizontal logic (clients in a que normally stay in line, hence breadth. que = breadth)
+# stack is verical logic (something drops down and you have to pick up what is on top first. stack = depth)
+
 # TODO: try to solve using DFS without recursion. Use curr_depth and child_depth but add one another variable
 #  for measuring max_depth. Use stack instead of que.
 
 # ::: DFS SOLUTION :::
 
+class Solution:
+    def maxDepth(self, root: Optional[TreeNode]) -> int:
+
+        que = deque()
+        if root:
+            if root.left is None and root.right is None:
+                return 1
+            curr = root
+            depth = 1
+            que.append((curr, depth))
+        else:
+            return 0
+
+        max_depth = depth
+        while que:
+            curr, curr_depth = que.pop()
+            if max_depth < curr_depth:
+                max_depth = curr_depth
+            if curr is not None:
+                left = curr.left
+                right = curr.right
+                if left is not None:
+                    child_depth = curr_depth + 1
+                    que.append((left, child_depth))
+                if right is not None:
+                    child_depth = curr_depth + 1
+                    que.append((right, child_depth))
+
+        return max_depth
