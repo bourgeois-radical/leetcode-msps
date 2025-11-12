@@ -1,6 +1,6 @@
-# Definition for a binary tree node.
 from inspect import stack
-
+from collections import deque
+from typing import Optional
 
 class TreeNode:
     def __init__(self, val=0, left=None, right=None):
@@ -8,12 +8,7 @@ class TreeNode:
         self.left = left
         self.right = right
 
-from collections import deque
-from typing import Optional
-
-# ::: BFS SOLUTION :::
-
-class Solution:
+class BFSSolution:
     def maxDepth(self, root: Optional[TreeNode]) -> int:
 
         que = deque()
@@ -40,30 +35,30 @@ class Solution:
 
         return curr_depth
 
-# Fishka №1:
-# The complexity of solution one can substitute through using more memory
-# Instead of using just one counter for the entire tree
-# We used additional info such as depth of each node (as opposed to the depth of the entire tree)
-# to calculate the depth of the entire tree
+'''
+Fishka №1:
+The complexity of solution one can substitute through using more memory
+Instead of using just one counter for the entire tree
+We used additional info such as depth of each node (as opposed to the depth of the entire tree)
+to calculate the depth of the entire tree
 
-# Fishka №2:
-# Write all edge cases first to improve runtime
-# For instance:
-# if root.left is None and root.right is None:
-#   return 1
+Fishka №2:
+Write all edge cases first to improve runtime
+For instance:
+if root.left is None and root.right is None:
+  return 1
 
-# Fishka №3
-# Why BFS is que and DFS is stack
-# becuase:
-# que is horizontal logic (clients in a que normally stay in line, hence breadth. que = breadth)
-# stack is verical logic (something drops down and you have to pick up what is on top first. stack = depth)
+Fishka №3
+Why BFS is que and DFS is stack
+becuase:
+que is horizontal logic (clients in a que normally stay in line, hence breadth. que = breadth)
+stack is verical logic (something drops down and you have to pick up what is on top first. stack = depth)
 
-# TODO: try to solve using DFS without recursion. Use curr_depth and child_depth but add one another variable
-#  for measuring max_depth. Use stack instead of que.
+TODO: try to solve using DFS without recursion. Use curr_depth and child_depth but add one another variable
+ for measuring max_depth. Use stack instead of que.
+'''
 
-# ::: DFS SOLUTION :::
-
-class Solution:
+class DFSSolution:
     def maxDepth(self, root: Optional[TreeNode]) -> int:
 
         que = deque()
