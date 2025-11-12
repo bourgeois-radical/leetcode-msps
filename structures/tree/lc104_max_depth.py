@@ -1,15 +1,12 @@
-# Definition for a binary tree node.
 from inspect import stack
-
+from collections import deque
+from typing import Optional
 
 class TreeNode:
     def __init__(self, val=0, left=None, right=None):
         self.val = val
         self.left = left
         self.right = right
-
-from collections import deque
-from typing import Optional
 
 class BFSSolution:
     def maxDepth(self, root: Optional[TreeNode]) -> int:
