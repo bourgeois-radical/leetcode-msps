@@ -3,7 +3,7 @@
 from typing import List
 
 class Solution:
-    def twoSum(self, numbers: List[int], target: int) -> List[int]:
+    def twoSum(self, numbers: List[int], target: int) -> List[int]: 
         l = 0
         r = len(numbers) - 1
 
@@ -15,8 +15,8 @@ class Solution:
                 r -= 1
             elif curr_sum == target:
                 return [l+1, r+1]
-            else:
-                raise AssertionError("Guys, you promised that: 'The tests are generated such that there is exactly one solution.'")
+            
+        raise AssertionError("Guys, you promised that: 'The tests are generated such that there is exactly one solution.'")
 
 '''
 Fishka: Use left and right pointers. The left pointer increases the sum (when shifted to the right) 
