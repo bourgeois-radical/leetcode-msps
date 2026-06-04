@@ -1,5 +1,9 @@
 # https://leetcode.com/problems/invert-binary-tree/
 
+from collections import deque
+from typing import Optional
+
+
 # Definition for a binary tree node.
 class TreeNode:
     def __init__(self, val=0, left=None, right=None):
@@ -7,14 +11,9 @@ class TreeNode:
         self.left = left
         self.right = right
 
-from collections import deque
-from typing import Optional
-import copy
-
 
 class Solution:
     def invertTree(self, root: Optional[TreeNode]) -> Optional[TreeNode]:
-
         if not root:
             return root
 
@@ -27,13 +26,13 @@ class Solution:
                 # left_node = copy.deepcopy(curr_node.left)
                 # right_node = copy.deepcopy(curr_node.right)
                 # Why it works even without deepcopy?
-                left_node = curr_node.left # left_node points to -> curr_node.left
-                right_node = curr_node.right # right_node points to -> curr_node.right
+                left_node = curr_node.left  # left_node points to -> curr_node.left
+                right_node = curr_node.right  # right_node points to -> curr_node.right
 
-                curr_node.left = right_node # curr_node.left points to -> right_node -> curr_node.right
+                curr_node.left = right_node  # curr_node.left points to -> right_node -> curr_node.right
                 que.append(left_node)
 
-                curr_node.right = left_node # curr_node.right points to -> left_node -> curr_node.left
+                curr_node.right = left_node  # curr_node.right points to -> left_node -> curr_node.left
                 que.append(right_node)
 
                 # So: 1. left -> curr.left
@@ -42,5 +41,3 @@ class Solution:
                 # left still points to -> curr.left that is why curr.right -> left -> curr.left still works
 
         return root
-
-

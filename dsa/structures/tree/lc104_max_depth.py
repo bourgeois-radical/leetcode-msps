@@ -1,8 +1,8 @@
 # https://leetcode.com/problems/maximum-depth-of-binary-tree/
 
-from inspect import stack
 from collections import deque
 from typing import Optional
+
 
 class TreeNode:
     def __init__(self, val=0, left=None, right=None):
@@ -10,9 +10,9 @@ class TreeNode:
         self.left = left
         self.right = right
 
+
 class BFSSolution:
     def maxDepth(self, root: Optional[TreeNode]) -> int:
-
         que = deque()
         if root:
             if root.left is None and root.right is None:
@@ -37,7 +37,8 @@ class BFSSolution:
 
         return curr_depth
 
-'''
+
+"""
 Fishka №1:
 The complexity of solution one can substitute through using more memory
 Instead of using just one counter for the entire tree
@@ -58,11 +59,11 @@ stack is verical logic (something drops down and you have to pick up what is on 
 
 TODO: try to solve using DFS without recursion. Use curr_depth and child_depth but add one another variable
  for measuring max_depth. Use stack instead of que.
-'''
+"""
+
 
 class DFSSolution:
     def maxDepth(self, root: Optional[TreeNode]) -> int:
-
         que = deque()
         if root:
             if root.left is None and root.right is None:

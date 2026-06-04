@@ -3,4 +3,14 @@ name = "leetcode"
 version = "0.1.0"
 description = "Add your description here"
 requires-python = ">=3.9"
-dependencies = []
+dependencies = [
+    "rich>=15.0.0",
+]
+
+[dependency-groups]
+dev = [
+    "pre-commit>=4.3.0",
+    "pyrefly>=1.0.0",
+    "pytest>=8.4.2",
+    "ruff>=0.15.15",
+]
