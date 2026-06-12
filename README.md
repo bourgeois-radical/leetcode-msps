@@ -146,6 +146,9 @@ Every committed solution must have:
 
 ## Resources
 
+### ML
+- [Deep-ML](https://www.deep-ml.com/problems) - Practice Machine Learning and Data Science leetcode-style problems
+
 ### DSA
 - [NeetCode 150](https://neetcode.io/practice/practice/neetcode150) — structured 150 with video explanations
 - [LeetCode Patterns](https://seanprashad.com/leetcode-patterns/) — problems grouped by pattern
