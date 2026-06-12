@@ -1,0 +1,5 @@
+# Extends exclusions to target the root pandas directory
+extend-exclude = ["pandas"]
+
+# Overrides editor/pre-commit behaviors to strictly respect the ignore rules
+force-exclude = true

@@ -14,6 +14,8 @@ class Solution:
             else:
                 value_index_map[curr_num] = curr_index
 
+        return []
+
 
 """
 Fishka: Use a hash map as a look-up to optimize time complexity from O(n^2) to O(n) at cost of additional memory.

@@ -23,6 +23,7 @@ class BFSSolution:
         else:
             return 0
 
+        curr_depth = depth
         while que:
             curr, curr_depth = que.popleft()
             if curr is not None:

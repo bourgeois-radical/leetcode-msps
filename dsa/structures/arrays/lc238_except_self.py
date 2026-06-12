@@ -50,6 +50,7 @@ class InitialSolution:
         # answer_left2right[2] = num[0] * num[1] -> so, we collect all the products before the i
         # we will do the same when we traverse over the array backwards
         products_left2right = []
+        product = 1
         for i in range(len(nums)):
             if i == 0:
                 product = 1

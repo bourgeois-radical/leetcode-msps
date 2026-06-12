@@ -1,0 +1,2 @@
+# Exclude the root-level pandas folder and everything inside it
+project_excludes = [ "pandas/**" ]
