@@ -1,6 +1,8 @@
 # pyrefly: ignore-errors
 # ruff: noqa
 
+# https://platform.stratascratch.com/coding/10087-find-all-posts-which-were-reacted-to-with-a-heart?code_type=2
+
 # Import your libraries
 
 # Start writing code
