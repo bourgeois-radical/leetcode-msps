@@ -9,3 +9,7 @@ General rule: place the task in the folder of whatever concept would have blocke
 - `string_ops` — str.contains, str.extract, regex on text columns
 - `datetime` — resample, date arithmetic, dt accessor
 - `missing_data` — fillna, dropna, interpolate strategies
+
+
+A blueprint for each pandas task:
+
